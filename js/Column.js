@@ -32,7 +32,7 @@ function Column(id, name) {
 	        		self.createCard(card);
 	    		}
 			});
-			
+		});
 			
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
 		column.append(columnTitle)
@@ -48,10 +48,6 @@ function Column(id, name) {
 		  this.element.children('ul').append(card.element);
 		},
 		deleteColumn: function() {
-		  this.element.remove();
-		}
-	},
-	deleteColumn: function() {
 	    var self = this;
 	    $.ajax({
 	      url: baseUrl + '/column/' + self.id,
